@@ -1,0 +1,352 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E PROPORÇÃO DE CORES (60% Preto, 20% Azul, 10% Amarelo)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b0b0b; /* 60% PRETO (Fundo dominante) */
+    color: #f4f4f4;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   CABEÇALHO / NAVEGAÇÃO
+   ========================================================================== */
+header {
+    background-color: #121016; 
+    border-bottom: 2px solid #3b82f6; /* 20% AZUL em destaque no menu */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo span {
+    color: #3b82f6; /* 20% AZUL na marca */
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+nav a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #3b82f6; /* 20% Azul no hover */
+}
+
+.btn-nav {
+    background-color: #3b82f6; /* 20% AZUL */
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-nav:hover {
+    background-color: #1d4ed8;
+}
+
+/* ==========================================================================
+   SEÇÃO APRESENTAÇÃO (HERO)
+   ========================================================================== */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #0b0b0b 0%, #0d1527 100%); /* Mistura Preto e Azul suave */
+    border-bottom: 2px solid #3b82f6; /* 20% Azul */
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.hero h1 span {
+    color: #3b82f6; /* 20% AZUL */
+}
+
+.hero p {
+    font-size: 18px;
+    color: #9ca3af;
+    margin-bottom: 30px;
+}
+
+.btn-principal {
+    background-color: #3b82f6; /* 20% AZUL */
+    color: #ffffff;
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: transform 0.2s, background-color 0.2s;
+    display: inline-block;
+}
+
+.btn-principal:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   SEÇÃO SOBRE (Com imagem ao lado)
+   ========================================================================== */
+#sobre {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: #121016; 
+    border: 2px solid #3b82f6; /* 20% AZUL em destaque na borda */
+    border-radius: 12px;
+}
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.sobre-img {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #3b82f6; /* 20% Azul contornando a foto */
+}
+
+.sobre-img img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+.sobre-texto h2 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.sobre-texto h2 span {
+    color: #3b82f6; /* 20% Azul */
+}
+
+.sobre-texto p {
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   SEÇÃO DE PROJETOS
+   ========================================================================== */
+.projetos-container {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.projetos-container h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 60px;
+    color: #ffffff;
+    border-bottom: 3px solid #3b82f6; /* 20% AZUL */
+    display: inline-block;
+    padding-bottom: 10px;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+}
+
+.projeto-item {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px;
+    background-color: #15131c; 
+    border: 2px solid #3b82f6; /* 20% Azul estrutural */
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 35px;
+}
+
+/* Inversão para alternar texto e foto */
+.projeto-item.invertido .projeto-texto {
+    order: 1;
+}
+
+.projeto-item.invertido .projeto-img {
+    order: 2;
+}
+
+.projeto-img {
+    flex: 1;
+    order: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #3b82f6; /* 20% AZUL destacando as fotos dos projetos */
+    background-color: #0b0b0b;
+}
+
+.projeto-texto {
+    flex: 1;
+    order: 2;
+}
+
+.projeto-img img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
+
+.projeto-texto h3 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.projeto-texto h3 span {
+    color: #3b82f6; /* 20% Azul nos títulos dos projetos */
+}
+
+.projeto-texto p {
+    color: #d1d5db;
+    font-size: 15px;
+}
+
+/* ==========================================================================
+   SEÇÃO DE RELATOS DOS CLIENTES
+   ========================================================================== */
+.depoimentos-container {
+    background-color: #121016;
+    padding: 80px 20px;
+    text-align: center;
+    border-top: 2px solid #3b82f6; /* 20% AZUL */
+}
+
+.depoimentos-container h2 {
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.sub-depoimento {
+    color: #9ca3af;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+.grid-depoimentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card-depoimento {
+    background-color: #191622;
+    border: 2px solid #3b82f6; /* 20% AZUL nos cards de relato */
+    padding: 30px;
+    border-radius: 8px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.texto-relato {
+    font-style: italic;
+    color: #d1d5db;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.nome-cliente {
+    color: #eab308; /* 10% AMARELO reservado para um detalhe discreto na assinatura do cliente */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   RODAPÉ / CONTATO
+   ========================================================================== */
+footer {
+    background-color: #0b0b0b;
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 2px solid #3b82f6; /* 20% AZUL */
+}
+
+footer h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #9ca3af;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.email-contato {
+    color: #3b82f6 !important; /* 20% AZUL */
+    font-weight: bold;
+}
+
+.copyright {
+    color: #6b7280;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+/* ==========================================================================
+   SCROLL-DRIVEN ANIMATION (Animações de rolagem)
+   ========================================================================== */
+.pre-animacao {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.pre-animacao.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
